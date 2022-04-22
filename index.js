@@ -45,7 +45,7 @@ function rand1Number() {
 //a. JS pagalba perskaitykite masyvą africa. (4 taškai)
 //b. Naudodami createElement() ir kitus reikalingus metodus sukurkite kiekvienam masyvo elementui po <li> tagą su elemento stringu viduje ir juos įrašykite į <ul> tago vidų. (5 taškai)
 //c. Elementus su tuščiais stringais praleiskite ir jiems <li> elementų nekurkite. (4 taškai)
-let ul = document.querySelector("ul");
+let ul = document.getElementById("africa");
 for (let i = 0; i < africa.length; i++) {
    let li = document.createElement("li");
    li.innerText = africa[i];
@@ -75,3 +75,9 @@ function aMinusB() {
 //b. Tą stringą naudodami innerHTML() metodą įdėkite į <ul> tago vidų. (5 taškai)
 //c. Generavimo metu “Dingo” background’ą nuspalvinkite mėlynai. (5 taškai)
 
+let ul2 = document.getElementById("australia");
+for (let i = 0; i<australia.length; i++) {
+   let li = document.createElement("li");
+   li.innerText = australia[i];
+   ul2.appendChild(li);
+}
