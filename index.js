@@ -11,7 +11,6 @@ function rand(min, max) {
 // a. Paspaudus mygtuką kiekvienam tagui sugeneruotkite rand() atskirą skaičių nuo 1 iki 6 ir jį įrašykite į tago vidų naudojant innerText() metodą. (4 taškai)
 // b. Paspaudus mygtuką skaičiai turi būti pergeneruojami iš naujo. Jeigu sugeneruoti skaičiai yra vienodi, juos nudažyti raudonai. (4 taškai)
 
-//1.
 let h2 = document.querySelectorAll("h2");
 function randNumber() {
    h2[0].innerText = rand(1, 6);
@@ -26,7 +25,7 @@ function randNumber() {
    }
 }
 
-//2.2. Tiesiogiai HTML faile rankiniu būdu sukurkite <h3> tagą ir vieną mygtuką. Susikurkite tuščią masyvą, skaičiams saugoti. (2 taškai)
+//2. Tiesiogiai HTML faile rankiniu būdu sukurkite <h3> tagą ir vieną mygtuką. Susikurkite tuščią masyvą, skaičiams saugoti. (2 taškai)
 //a. Paspaudus mygtuką, sugeneruokite rand() skaičių nuo 1 iki 10. Sugeneruotą skaičių pridėkite į masyvą, o tą masyvą atspausdinkite konsolėle. (4 taškai)
 //b. <h3> tage skaičiuokite ir su innerText() metodu rašykite visų sugeneruotų skaičių sumą. (4 taškai)
 let h3 = document.querySelector("h3");
@@ -76,8 +75,14 @@ function aMinusB() {
 //c. Generavimo metu “Dingo” background’ą nuspalvinkite mėlynai. (5 taškai)
 
 let ul2 = document.getElementById("australia");
-for (let i = 0; i<australia.length; i++) {
-   let li = document.createElement("li");
-   li.innerText = australia[i];
-   ul2.appendChild(li);
+let newArray = [];
+for (let i = 0; i < australia.length; i++) {
+   let result = "<li>" + australia[i] + "</li>";
+   newArray.push(result);
 }
+let string = newArray.join("");
+ul2.innerHTML = string;
+let color = document.getElementById("australia").childNodes;
+color[2].style.backgroundColor = "#0000FF";
+
+
